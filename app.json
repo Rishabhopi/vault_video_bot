@@ -1,0 +1,33 @@
+{
+  "name": "Vault Video Bot",
+  "description": "A Telegram bot that sends random unseen videos from a private vault channel with must-join, admin panel, sudo, and more.",
+  "repository": "https://github.com/yourusername/vault_video_bot",
+  "keywords": ["telegram", "bot", "python", "video", "random", "heroku"],
+  "env": {
+    "TELEGRAM_BOT_TOKEN": {
+      "description": "Your Telegram bot token from @BotFather",
+      "required": true
+    },
+    "MONGO_URL": {
+      "description": "Your MongoDB connection string (e.g., from MongoDB Atlas)",
+      "required": true
+    },
+    "VAULT_CHANNEL_ID": {
+      "description": "Channel ID where all videos are stored (e.g., -1001234567890)",
+      "required": true
+    },
+    "FORCE_JOIN_CHANNEL": {
+      "description": "Username of the channel users must join to use the bot (without @)",
+      "required": true
+    },
+    "ADMIN_USER_ID": {
+      "description": "Your Telegram numeric user ID (as the bot's main admin)",
+      "required": true
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
